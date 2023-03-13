@@ -14,7 +14,7 @@ export const ChatInput: FC<Props> = ({ onSend }) => {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
     if (value.length > 4000) {
-      alert("Message limit is 4000 characters");
+      alert("您输入的内容太多了，我们仅能支持 4000 个字符");
       return;
     }
 
@@ -23,7 +23,7 @@ export const ChatInput: FC<Props> = ({ onSend }) => {
 
   const handleSend = () => {
     if (!content) {
-      alert("Please enter a message");
+      alert("请输入您的问题");
       return;
     }
     onSend({ role: "user", content });
@@ -50,7 +50,7 @@ export const ChatInput: FC<Props> = ({ onSend }) => {
         ref={textareaRef}
         className="min-h-[44px] rounded-lg pl-4 pr-12 py-2 w-full focus:outline-none focus:ring-1 focus:ring-neutral-300 border-2 border-neutral-200"
         style={{ resize: "none" }}
-        placeholder="Type a message..."
+        placeholder="请输入您的问题..."
         value={content}
         rows={1}
         onChange={handleChange}
