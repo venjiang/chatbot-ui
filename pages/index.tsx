@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Chatbot</title>
+        <title>薇薇 AI 助手</title>
         <meta
           name="description"
           content="A simple chatbot starter kit for OpenAI's chat model using Next.js, TypeScript, and Tailwind CSS."
